@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>
+        INDEX
+    </title>
+</head>
+<body>
+    <h1>You are in index page</h1>
+<ul>
+    {%block content%}
+
+        {% for prod in products %}
+
+<p>Name:<li>{{prod.name}}</li></p>
+<p>About:<li>{{prod.desc}}</li></p>
+<p>price:<li>{{prod.price}}</li></p>
+<p>stock:<li>{{prod.stock}}</li></p>
+        {% load static %}
+<p>Image:<li><img src="{% static "homepage/" %}{{prod.image}}" alt="Photo" height="40%" width="10%"></img></li></p>
+        {%endfor %}
+</ul>
+    {%endblock%}
+</body>
+</html>
