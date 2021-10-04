@@ -6,6 +6,4 @@ app_name = 'sellItem'
 
 urlpatterns = [
     url(r'^$',views.item_form, name='thirdpartyform'),
-    path('additem/', views.itemadd, name='itemadd'),
-    
 ]

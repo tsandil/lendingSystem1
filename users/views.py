@@ -34,7 +34,5 @@ def addlend(request):
 def homePage(request):
     return redirect('homepage')
 
-# def itemform(request):
-#     return redirect('thirdpartyform')
 
 

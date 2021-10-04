@@ -7,6 +7,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 
 def index(request):
+    
     prods=Products.objects.all()
     return render(request, 'homepage/index.html',{'products':prods})
 

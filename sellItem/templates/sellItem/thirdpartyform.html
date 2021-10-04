@@ -3,7 +3,7 @@
 {% block title %}Third Party Form{% endblock %}
 
 {% block body %}
-<form action="{% url 'sellItem:thirdpartyform' %}" method="POST">
+<form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" />
