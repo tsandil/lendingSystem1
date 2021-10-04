@@ -31,4 +31,5 @@ def signup(request):
 def addlend(request):
     return  redirect('feedback_form')
 
-
+def homePage(request):
+    return redirect('homepage')
