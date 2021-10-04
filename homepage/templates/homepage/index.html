@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <title>
-        INDEX
-    </title>
-</head>
-<body>
-    <h1>You are in index page</h1>
-<ul>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <title>
+            INDEX
+        </title>
+    </head>
+    <body>
+  
+    <ul>
+        <div style="padding-top: 10%;">
+            </div>
+    
     {%block content%}
-
-        {% for prod in products %}
-
-<p>Name:<li>{{prod.name}}</li></p>
-<p>About:<li>{{prod.desc}}</li></p>
-<p>price:<li>{{prod.price}}</li></p>
-<p>stock:<li>{{prod.stock}}</li></p>
-        {% load static %}
-<p>Image:<li><img src="{% static "homepage/" %}{{prod.image}}" alt="Photo" height="40%" width="10%"></img></li></p>
-        {%endfor %}
-</ul>
+        <div class="row">
+            {% for prod in products %}
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                {% load static %}
+                <img src="{% static "homepage/" %}{{prod.image}}" class="card-img-top" alt="Photo">
+                <div class="card-body">
+                    <h5 class="card-title">{{prod.name}}</h5>
+                    <p class="card-text">{{prod.desc}}</p>
+                    <p class="card-text">{{prod.price}}</p>
+                    <p class="card-text">{{prod.stock}}</p>
+                     <a href="#" class="btn btn-primary">Add To Cart</a>
+                </div>
+             </div>
+          </div>
+          {%endfor %}
+        </div>       
+    </ul>
     {%endblock%}
-</body>
+    </body>
 </html>
