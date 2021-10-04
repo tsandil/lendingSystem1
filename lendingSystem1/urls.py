@@ -5,7 +5,6 @@ from django.conf.urls import include, url
 
 from users import views as user_views
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', user_views.home, name='home'),
@@ -16,4 +15,7 @@ urlpatterns = [
     path('feedback_form/', user_views.addlend, name='feedback'),
     url(r'homepage/', include('homepage.urls')),
     path('homepage', user_views.homePage, name='homepage'),
+    url(r'thirpartyform/', include('sellItem.urls')),
+    path('thirdpartyform', user_views.itemform, name='thirdpartyform'),
+    
 ]

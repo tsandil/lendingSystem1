@@ -1,0 +1,12 @@
+{% extends 'sellItem/base3.html' %}
+
+{% block title %}Third Party Form{% endblock %}
+
+{% block body %}
+<form action="{% url 'form:itemadd' %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" />
+</form>
+{% endblock %}
+
