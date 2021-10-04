@@ -4,6 +4,7 @@ from django.contrib.auth import views as auth_views
 from django.conf.urls import include, url 
 
 from users import views as user_views
+from sellItem import views as sell_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -16,6 +17,6 @@ urlpatterns = [
     url(r'homepage/', include('homepage.urls')),
     path('homepage', user_views.homePage, name='homepage'),
     url(r'thirpartyform/', include('sellItem.urls')),
-    path('thirdpartyform', user_views.itemform, name='thirdpartyform'),
+    path('thirdpartyform', sell_views.item_form, name='thirdpartyform'),
     
 ]

@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'homepage',
     'users.apps.UsersConfig',
     'form.apps.FormConfig',
-    'sellItem',
+    'sellItem'
 
 
 ]
@@ -135,5 +135,5 @@ LOGOUT_REDIRECT_URL= 'home'
 
 LOGIN_REDIRECT_URL="home"
 
-add_lend_REDIRECT_URL="thirdparty"
+
 
