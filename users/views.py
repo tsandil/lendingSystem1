@@ -2,8 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from .forms import SignupForm
-
-
+from homepage.models import Products
+from sellItem.models import Item
 
 def home(request):
     return render(request, 'users/home.html')
@@ -32,7 +32,10 @@ def addlend(request):
     return  redirect('feedback_form')
 
 def homePage(request):
-    return redirect('homepage')
+    item_list = Item.objects.all()
+    return render(request, 'homepage/index.html', {'item_list': item_list})
+
+    #return redirect('homepage')
 
 
 

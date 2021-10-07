@@ -15,7 +15,7 @@ def item_form(request):
         form2=ItemForm()
 
     
-    return render(request, 'sellItem/thirdpartyform.html',{'form':form2})
+    return render(request, 'sellItem/thirdpartyform.html',{'form2':form2})
 
    
    
