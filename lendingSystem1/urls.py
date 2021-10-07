@@ -17,7 +17,7 @@ urlpatterns = [
     url(r'^feedback_form/', include('form.urls')),
     path('feedback_form/', user_views.addlend, name='feedback'),
     url(r'homepage/', include('homepage.urls')),
-    path('homepage/', user_views.homePage, name='homepage'),
+    path('homepage', user_views.homePage, name='homepage'),
     url(r'thirdpartyform/', include('sellItem.urls')),
     path('thirdpartyform', sell_views.item_form, name='thirdpartyform'),
 ]
