@@ -21,7 +21,5 @@ urlpatterns = [
     path('homepage/', user_views.homePage, name='homepage'),
     url(r'^thirdpartyform/', include('sellItem.urls')),
     path('thirdpartyform/', sell_views.item_form, name='thirdpartyform'),
-    url(r'^itemadd/', include('sellItem.urls')),
-    path('itemadd/', sell_views.item_confirm, name='itemadd'),
 
 ]

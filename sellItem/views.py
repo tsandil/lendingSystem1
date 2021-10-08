@@ -9,7 +9,7 @@ def item_form(request):
         
         if form2.is_valid():
             form2.save()
-            return redirect('itemadd')
+            return redirect('homepage')
         
     else:
         form2=ItemForm()
@@ -17,8 +17,8 @@ def item_form(request):
     
     return render(request, 'sellItem/thirdpartyform.html',{'form':form2})
 
-def item_confirm(request):
-    return redirect('itemadd')
+# def item_confirm(request):
+#     return redirect('itemadd')
 
 
 
