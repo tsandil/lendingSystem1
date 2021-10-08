@@ -9,13 +9,18 @@ def item_form(request):
         
         if form2.is_valid():
             form2.save()
-            return HttpResponse("You have submitted item for selling!!!")
+            return redirect('itemadd')
         
     else:
         form2=ItemForm()
 
     
     return render(request, 'sellItem/thirdpartyform.html',{'form':form2})
+
+def item_confirm(request):
+    return redirect('itemadd')
+
+
 
    
    

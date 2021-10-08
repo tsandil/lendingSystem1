@@ -9,10 +9,9 @@ from django.views.generic import ListView, TemplateView
 
 
 def index(request):
-    
-    prods=Products.objects.all()
-    return render(request, 'homepage/index.html',{'products':prods})
 
+     prods=Products.objects.all()
+     return render(request, 'homepage/index.html',{'products':prods})
 
 class ItemListView(ListView):
     model = Item

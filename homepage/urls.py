@@ -8,8 +8,9 @@ from django.conf import settings
 
 urlpatterns = [
     path('', ItemListView.as_view(), name='index'),
-    # path('', views.index, name='index'),
+     path('', views.index, name='index'),
     path('index', HomePageView.as_view(), name="Home"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
-urlpatterns+= staticfiles_urlpatterns()
+urlpatterns += staticfiles_urlpatterns()
+

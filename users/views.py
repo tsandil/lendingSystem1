@@ -29,7 +29,7 @@ def signup(request):
     return render(request, 'users/signup.html', context)
 
 def addlend(request):
-    return  redirect('feedback_form')
+    return redirect('feedback_form')
 
 def homePage(request):
     return redirect('homepage')

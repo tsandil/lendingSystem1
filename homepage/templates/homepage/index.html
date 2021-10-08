@@ -22,10 +22,10 @@
             {% for ad in ads %}
             <div class="col">
                 <div class="card" style="width: 18rem;">
-{#                {% load static %}#}
+                    {% load static %}
 {#                <img src="{% static "media/" %}{{ad.image}}" class="card-img-top" alt="Photo">#}
 {#                <img src="{%  static 'ad.product_pic.url' %}" class="card-img-top" alt="Photo">#}
-                <img src="{{ ad.product_pic.url }}" class="card-img-top" alt="Photo">
+                <img src="{% static "media/" %}{{ ad.product_pic }}" class="card-img-top" alt="Photo">
                 <div class="card-body">
                     <h5 class="card-title">{{ad.first_name}}&nbsp;{{ ad.last_name }}</h5>
                     <p class="card-text">{{ad.product_details}}</p>
