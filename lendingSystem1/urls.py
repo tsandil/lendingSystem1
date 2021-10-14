@@ -5,6 +5,7 @@ from django.conf.urls import include, url
 
 from users import views as user_views
 from sellItem import views as sell_views
+from hire import views as hire_views
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -21,5 +22,9 @@ urlpatterns = [
     path('homepage/', user_views.homePage, name='homepage'),
     url(r'^thirdpartyform/', include('sellItem.urls')),
     path('thirdpartyform/', sell_views.item_form, name='thirdpartyform'),
+    url(r'^hireform/', include('hire.urls')),
+    path('hireform/', hire_views.hire_form, name='hireform'),
+    url(r'^hirePage/', include('hire.urls')),
+    path('hirePage/', hire_views.hirePage, name='hirePage'),
 
 ]

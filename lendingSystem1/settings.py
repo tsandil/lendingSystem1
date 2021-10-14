@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'homepage',
     'users.apps.UsersConfig',
     'form.apps.FormConfig',
-    'sellItem'
+    'sellItem',
+    'hire',
 
 
 ]

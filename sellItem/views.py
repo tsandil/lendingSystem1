@@ -17,9 +17,6 @@ def item_form(request):
     
     return render(request, 'sellItem/thirdpartyform.html',{'form':form2})
 
-# def item_confirm(request):
-#     return redirect('itemadd')
-
 
 
    
