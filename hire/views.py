@@ -16,22 +16,22 @@ def hire_form(request):
 
         if form3.is_valid():
             form3.save()
-        return render(request, 'hire/hirePage.html', {})
+        return redirect('homepage')
 
     else:
         form3 = HireForm()
     return render(request, 'hire/hireform.html', {'form': form3})
 
-def hirePage(request):
-    return redirect('hirePage')
+# def hirePage(request):
+#     return redirect('hirePage')
 
-class HireItemListView(ListView):
-     model = ItemforHire
-     template_name = "hire/hirePage.html"
-     context_object_name = "ads1"
+# class HireItemListView(ListView):
+#      model = ItemforHire
+#      template_name = "hire/hirePage.html"
+#      context_object_name = "ads1"
 
 
-class HirePageView(TemplateView):
-     template_name='hirePage.html'
+# class HirePageView(TemplateView):
+#      template_name='hirePage.html'
 
 

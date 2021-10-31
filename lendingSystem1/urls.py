@@ -24,7 +24,7 @@ urlpatterns = [
     path('thirdpartyform/', sell_views.item_form, name='thirdpartyform'),
     url(r'^hireform/', include('hire.urls')),
     path('hireform/', hire_views.hire_form, name='hireform'),
-    url(r'^hirePage/', include('hire.urls')),
-    path('hirePage/', hire_views.hirePage, name='hirePage'),
+    # url(r'^hirePage/', include('hire.urls')),
+    # path('hirePage/', hire_views.hirePage, name='hirePage'),
 
 ]

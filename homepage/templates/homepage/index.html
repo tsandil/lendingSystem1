@@ -19,13 +19,10 @@
     {%block content%}
 
         <div class="row">
-{#            {% for prod in products %}#}
             {% for ad in ads %}
             <div class="col">
                 <div class="card" style="width: 18rem;">
                     {% load static %}
-{#                <img src="{% static "media/" %}{{ad.image}}" class="card-img-top" alt="Photo">#}
-{#                <img src="{%  static 'ad.product_pic.url' %}" class="card-img-top" alt="Photo">#}
                 <img src="{% static "media/" %}{{ ad.product_pic }}" class="card-img-top" alt="Photo">
                 <div class="card-body">
                     <h5 class="card-title">{{ad.first_name}}&nbsp;{{ ad.last_name }}</h5>
@@ -38,7 +35,31 @@
           </div>
           {% endfor %}
         </div>       
-    </ul>
+
+
+        <h1>Lending Section</h1>
+
+
+
+
+
+        <div class="row">
+            {% for lend in ads1 %}
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    {% load static %}
+                <img src="{% static "media/" %}{{ lend.product_pic }}" class="card-img-top" alt="Photo">
+                <div class="card-body">
+                    <h5 class="card-title">{{lend.product_name}}</h5>
+                    <p class="card-text">{{lend.product_details}}</p>
+                    <p class="card-text">{{lend.product_price}}</p>
+                    <p class="card-text">{{lend.product_stock}}</p>
+                     <a href="" class="btn btn-primary">Lend</a>
+                </div>
+             </div>
+          </div>
+          {% endfor %}
+        </div>     
     {%endblock%}
     </body>
 </html>
