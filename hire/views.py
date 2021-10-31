@@ -6,9 +6,6 @@ from django.views.generic import ListView, TemplateView
 from hire.models import ItemforHire
 
 
-def index1(request):
-    prods1 = ItemforHire.objects.all()
-    return render(request, 'hire/homePage.html', {'products': prods1})
 
 def hire_form(request):
     if request.method == 'POST':
@@ -21,17 +18,5 @@ def hire_form(request):
     else:
         form3 = HireForm()
     return render(request, 'hire/hireform.html', {'form': form3})
-
-# def hirePage(request):
-#     return redirect('hirePage')
-
-# class HireItemListView(ListView):
-#      model = ItemforHire
-#      template_name = "hire/hirePage.html"
-#      context_object_name = "ads1"
-
-
-# class HirePageView(TemplateView):
-#      template_name='hirePage.html'
 
 

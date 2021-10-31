@@ -3,6 +3,7 @@ import os
 from django.core.files import File
 import urllib
 class Item(models.Model):
+    selling_id=models.BigAutoField(primary_key=True,default=0)
     first_name = models.CharField(max_length=55)
     last_name = models.CharField(max_length=55)
     product_name= models.CharField(max_length=120)

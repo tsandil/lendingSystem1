@@ -6,4 +6,4 @@ class Products(models.Model):
     desc=models.TextField(max_length=1000)
     price=models.FloatField()
     stock=models.IntegerField()
-    image=models.ImageField(upload_to='Images/')
+    image=models.ImageField(upload_to='Images/')   

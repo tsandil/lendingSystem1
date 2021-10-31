@@ -5,6 +5,7 @@ import urllib
 
 
 class ItemforHire(models.Model):
+    product_id =models.BigAutoField(primary_key=True, default=0)
     product_name = models.CharField(max_length=120)
     product_details = models.TextField(max_length=1000)
     contact_number = models.IntegerField(default=None)

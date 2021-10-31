@@ -2,7 +2,6 @@
 # from django.http import HttpResponse
 
 from lendingSystem1.settings import TEMPLATES
-from homepage.models import Products
 from sellItem.models import Item
 from django.views.generic import ListView, TemplateView
 from hire.models import ItemforHire
